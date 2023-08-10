@@ -1,0 +1,1 @@
+vector<vector<int>> vec( n , vector<int> (m, 0));	//n rows m columns

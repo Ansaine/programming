@@ -1,0 +1,31 @@
+class Solution {
+public:
+    
+    vector<vector<int>> power_set;              //global vector
+    
+    void generate(vector<int> &subset, int i, vector<int> &num)
+    {
+        if(i == num.size())                     
+        {
+            power_set.push_back(subset);
+            return;
+        }
+
+        generate(subset,i+1,num);               //dont include ith value to subet
+
+        subset.push_back(num[i]);               //include ith value to subset      
+        generate(subset,i+1, num);
+        subset.pop_back();
+    }    
+        
+        
+    vector<vector<int>> subsets(vector<int> &nums){        
+    
+    vector<int>  temp_subset;
+    generate(temp_subset,0,nums);
+    return power_set;
+        
+    }
+    
+
+};

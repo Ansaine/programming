@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1606982857 source:d:\programming\infix to prefix\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

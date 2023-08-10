@@ -1,0 +1,6 @@
+int count(Node* root) {
+        if(root == NULL)
+            return 0;
+        else 
+            return 1 + count(root->left) + count(root->right);
+    }

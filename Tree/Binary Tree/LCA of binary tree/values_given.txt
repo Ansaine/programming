@@ -1,0 +1,22 @@
+ // LCA of binary tree
+
+    TreeNode* lca(TreeNode* root, int p, int q) {
+        
+        //base case
+        if(root==NULL or root->val == p or root->val == q)
+            return root;
+        
+        //hypothesis
+        TreeNode* left = lca(root->left, p, q);
+        TreeNode* right = lca(root->right, p, q);
+        
+        //induction
+        if(left==NULL)
+            return right;
+        
+        else if (right==NULL)
+            return left;
+        
+        else                        //both left and right are not null
+            return root;  
+    }

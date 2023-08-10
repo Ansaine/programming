@@ -1,0 +1,2 @@
+Method 1 - Simple recursive dp from the back. similar to logest common subsequence
+Method 2 - string1.length + string2.length - LCS

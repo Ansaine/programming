@@ -1,0 +1,9 @@
+// 1 - indexed height
+
+int maxDepth(TreeNode* node) {
+	if( node ==NULL)
+            	return 0;
+        
+        	return max(maxDepth(node->left), maxDepth(node->right)) + 1;
+
+    }

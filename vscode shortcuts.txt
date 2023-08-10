@@ -1,0 +1,11 @@
+01.  (Ctrl + C) Copy/(Ctrl + X) Cut/(Ctrl + V) Paste Whole Lines
+02.  (Ctrl + /) Toggle Comment on Highlighted Lines
+03.  (Ctrl + P) Open File Within Project By Name
+04.  (Ctrl + F) Find In File, (Ctrl + Shift + F) Find In Project
+05.  (Tab) Indent Highlighted Lines, (Shift + Tab) Unindent Highlighted Lines
+06.  (Ctrl + N) Create New File
+07.  (Ctrl + Enter) Create New Line Below Current Line Independent of Cursor Position
+08.  (Ctrl + Left/Right Arrow) Move Cursor Whole Words At A Time
+09.  (Shift + Left/Right Arrow) Highlight Characters With Arrow Keys
+10.  (Ctrl + S) Save File, (Ctrl + A) Select All, (Ctrl + Z) Undo, (Ctrl + Shift + Z)/(Ctrl + Y) Redo
+11.  (Alt + Up/Down Arrow) moves the line up or down.

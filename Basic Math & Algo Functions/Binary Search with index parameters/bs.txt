@@ -1,0 +1,17 @@
+    int bs(vector<int> &nums, int i ,int j,int target){
+        int l = i, h = j;
+        int mid;
+        
+        while(l<=h)
+        {
+            mid = l + (h-l)/2;
+            if(nums[mid] == target)
+                return mid;
+            else if(nums[mid]>target){
+                h = mid-1;
+            }else
+                l = mid+1;
+        }
+        
+        return -1;            
+    }

@@ -1,0 +1,51 @@
+class Solution {
+public:
+    
+int ans = 0;
+    
+void forward(int i ,int j , int cherries, vector<vector<int>> &g )
+{   
+    if(i>=g.size() or j>=g[0].size() or g[i][j] == -1 )
+        return;
+    
+    if(i==g.size()-1 and j==g[0].size()-1){
+        back(i,j,cherries,g);               //cherry at this last position will be picked by back()
+        return;        
+    }
+    
+    int cherry = g[i][j];
+    
+    g[i][j] = 0;                            //backtracking
+    forward(i+1,j,cherries+cherry,g);
+    forward(i,j+1,cherries+cherry,g);
+    g[i][j] = cherry;
+        
+}
+    
+void back(int i ,int j , int cherries, vector<vector<int>> &g )
+{   
+    if(i<0 or j<0 or g[i][j] == -1 )
+        return;
+    if(i==0 and j==0){
+        ans = max(ans,cherries + g[0][0]);
+        return;
+    }
+    
+    int cherry = g[i][j];
+    
+    g[i][j] = 0;                            //backtracking
+    back(i-1,j,cherries+cherry,g);
+    back(i,j-1,cherries+cherry,g);
+    g[i][j] = cherry;
+        
+}
+    
+    
+    int cherryPickup(vector<vector<int>>& g) {
+        
+        forward(0,0,0,g);
+        return ans;
+        
+        
+    }
+};
