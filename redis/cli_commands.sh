@@ -7,4 +7,5 @@ SETNX key value // if key exists, it cant update
 TYPE key        // give datatype
 EXISTS key
 TTL key         // returns -1 for no ttl, -2 for key doesnt exist
-EXPIRE key <time im secs>
+EXPIRE key <seconds>
+SETEX key seconds value
