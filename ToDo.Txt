@@ -1,4 +1,0 @@
-*********** To Do ***************
-
-1. Longest increasing subsequence ( can also be done by dynamic programming )
-2. XOR without using XOR operator
